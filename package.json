@@ -16,12 +16,12 @@
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "build": "npm run build:linux && npm run build:macos && npm run build:windows",
-    "build:linux": "pkg . --targets node16-linux-x64 -o dist/citizen-linux-x64",
+    "build:linux": "pkg . --debug --targets node16-linux-x64 -o dist/citizen-linux-x64",
     "build:macos": "pkg . --targets node16-macos-x64,node16-macos-arm64 -o dist/citizen-macos",
     "build:windows": "pkg . --targets node16-win-x64 -o dist/citizen-win-x64.exe"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.30.0",
+    "@aws-sdk/client-s3": "^3.83.0",
     "@evops/hcl-terraform-parser": "^1.0.0",
     "body-parser": "^1.19.0",
     "chalk": "^4.1.2",
